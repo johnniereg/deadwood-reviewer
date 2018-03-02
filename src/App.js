@@ -77,28 +77,32 @@ class App extends Component {
 
     // Allow users to vote only once per episode by hiding vote options and displaying their choice.
     if (episode.vote === '') {
-      voting = <div>  
-                <div className="one-half column" onClick={(e) => { this.handleVote('like') }}>
-                  <VoteButton buttonType={'like'} buttonName={`I Liked It`} />
+      voting =  <div>  
+                  <div className="one-half column" onClick={(e) => { this.handleVote('like') }}>
+                    <VoteButton buttonType={'like'} buttonName={`I Liked It`} />
+                  </div>
+                  <div className="one-half column" onClick={(e) => { this.handleVote('dislike') }}>
+                    <VoteButton buttonType={'dislike'} buttonName={`I Didn't Like It`} />
+                  </div>
                 </div>
-                <div className="one-half column" onClick={(e) => { this.handleVote('dislike') }}>
-                  <VoteButton buttonType={'dislike'} buttonName={`I Didn't Like It`} />
-                </div>
-              </div>
     } else {
-      voting = <h5>You { episode.vote } this episode.</h5>
+      voting =  <div>
+                  <h5>You { episode.vote } this episode.</h5>
+                  <h6>Here's what Johnnie thought:</h6>
+                  <p>{ episode.thoughts }</p>
+                </div>
     }
 
     return (
       <div className="App">
         <div className="header container">
           <h1>Deadwood Reviewer</h1>
+          <h6>Rate episodes and see if you felt the same way as Johnnie did.</h6>
         </div>
         <div className="container">
           <div className="row">
             <div className="one-half column">
               <Episode index={this.state.index} />
-              <p>Did you like this episode?</p>
               <div className="row">
                 { voting }
               </div>
@@ -111,10 +115,11 @@ class App extends Component {
               <div onClick={(e) => { this.changeEpisode('previous') }}>
                 <a className="button">Previous Episode</a>
               </div>
+              <h5>Scoreboard:</h5>
+              <h6>You liked {this.state.likes} episodes.</h6>
+              <h6>You disliked {this.state.dislikes} episodes.</h6>
             </div>
           </div>
-          <h5>Scoreboard:</h5>
-          <h6>Likes: {this.state.likes} Dislikes: {this.state.dislikes} </h6>
         </div>
       </div>
     );

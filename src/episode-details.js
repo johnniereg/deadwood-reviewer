@@ -1,6 +1,7 @@
 const Episodes = [
     { 
         vote: "",
+        thoughts: "As far as first episodes of shows go, this one was pretty good! I liked it.",
         season: 1,
         episode: 1,
         title: "Deadwood",
@@ -8,6 +9,7 @@ const Episodes = [
     },
     {
         vote: "",
+        thoughts: "Hmmm not too sure about this one.",
         season: 1,        
         episode: 2,
         title: "Deep Water",
@@ -15,6 +17,7 @@ const Episodes = [
     },
     {
         vote: "",
+        thoughts: "It was pretty good!",
         season: 1,
         episode: 3,
         title: "Reconnoitering the Rim",
