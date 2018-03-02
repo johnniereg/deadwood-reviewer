@@ -6,7 +6,6 @@ import Episodes from './episode-details.js';
 import Episode from './components/Episode.js';
 import VoteButton from './components/VoteButton.js';
 
-
 class App extends Component {
 
   constructor(props) {
@@ -21,21 +20,31 @@ class App extends Component {
     this.changeEpisode = this.changeEpisode.bind(this);
   }
 
-  
+
   handleVote(vote) {
-    
+    var index = this.state.index;
+    var episodes = this.state.episodes;
+
     if (vote === 'like') {
-      console.log("Liked it!");
+      episodes[index].vote = 'liked';
+
       this.setState({
-        likes: this.state.likes + 1
+        likes: this.state.likes + 1,
+        episodes: episodes
       });
+
+      this.changeEpisode('next');
     }
 
     if (vote === 'dislike') {
-      console.log("Disliked it!");
+      episodes[index].vote = 'disliked';
+      
       this.setState({
-        dislikes: this.state.dislikes + 1
+        dislikes: this.state.dislikes + 1,
+        episodes: episodes
       });
+
+      this.changeEpisode('next');
     }
 
   }
@@ -62,6 +71,24 @@ class App extends Component {
 
 
   render() {
+    let voting = null;
+    let index = this.state.index;
+    let episode = this.state.episodes[index];
+
+    // Allow users to vote only once per episode by hiding vote options and displaying their choice.
+    if (episode.vote === '') {
+      voting = <div>  
+                <div className="one-half column" onClick={(e) => { this.handleVote('like') }}>
+                  <VoteButton buttonType={'like'} buttonName={`I Liked It`} />
+                </div>
+                <div className="one-half column" onClick={(e) => { this.handleVote('dislike') }}>
+                  <VoteButton buttonType={'dislike'} buttonName={`I Didn't Like It`} />
+                </div>
+              </div>
+    } else {
+      voting = <h5>You { episode.vote } this episode.</h5>
+    }
+
     return (
       <div className="App">
         <div className="header container">
@@ -76,20 +103,15 @@ class App extends Component {
               <Episode index={this.state.index} />
               <p>Did you like this episode?</p>
               <div className="row">
-                <div className="one-half column" onClick={(e) => { this.handleVote('like') }}>
-                  <VoteButton buttonType={'like'} buttonName={`I Liked It`} />
-                </div>
-                <div className="one-half column" onClick={(e) => { this.handleVote('dislike') }}>
-                  <VoteButton buttonType={'dislike'} buttonName={`I Didn't Like It`}  />
-                </div>
+                { voting }
               </div>
             </div>
             <div className="one-half column">
               <div onClick={(e) => {this.changeEpisode('next')}}>
-                <p>Next Episode</p>
+                <a className="button">Next Episode</a>
               </div>
               <div onClick={(e) => { this.changeEpisode('previous') }}>
-                <p>Previous Episode</p>
+                <a className="button">Previous Episode</a>
               </div>
             </div>
           </div>
