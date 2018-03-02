@@ -33,7 +33,7 @@ class App extends Component {
         episodes: episodes
       });
 
-      this.changeEpisode('next');
+      // this.changeEpisode('next');
     }
 
     if (vote === 'dislike') {
@@ -44,7 +44,7 @@ class App extends Component {
         episodes: episodes
       });
 
-      this.changeEpisode('next');
+      // this.changeEpisode('next');
     }
 
   }
@@ -93,9 +93,6 @@ class App extends Component {
       <div className="App">
         <div className="header container">
           <h1>Deadwood Reviewer</h1>
-          <h5>Scoreboard:</h5>
-          <h6>Likes: {this.state.likes} </h6>
-          <h6>Dislikes: {this.state.dislikes} </h6>
         </div>
         <div className="container">
           <div className="row">
@@ -107,6 +104,7 @@ class App extends Component {
               </div>
             </div>
             <div className="one-half column">
+              <h5>Navigate Episodes</h5>
               <div onClick={(e) => {this.changeEpisode('next')}}>
                 <a className="button">Next Episode</a>
               </div>
@@ -115,6 +113,8 @@ class App extends Component {
               </div>
             </div>
           </div>
+          <h5>Scoreboard:</h5>
+          <h6>Likes: {this.state.likes} Dislikes: {this.state.dislikes} </h6>
         </div>
       </div>
     );
