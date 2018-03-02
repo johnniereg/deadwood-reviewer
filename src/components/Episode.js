@@ -16,7 +16,7 @@ class Episode extends Component {
 
         return (
             <div>
-                <h4>{this.state.episodes[number].title}</h4>
+                <h4>'{this.state.episodes[number].title}'</h4>
                 <h6>Season {this.state.episodes[number].season} Episode {this.state.episodes[number].episode}</h6>
                 <p>{this.state.episodes[number].description}</p>
             </div>
