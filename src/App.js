@@ -21,6 +21,7 @@ class App extends Component {
     this.changeEpisode = this.changeEpisode.bind(this);
   }
 
+  
   handleVote(vote) {
     
     if (vote === 'like') {
@@ -39,11 +40,14 @@ class App extends Component {
 
   }
 
+  // Move forward and backwards between episodes in the program.
   changeEpisode(direction) {
     if (direction === 'next') {
-      this.setState({
-        index: this.state.index + 1
-      });
+      if (this.state.index < this.state.episodes.length - 1) {
+        this.setState({
+          index: this.state.index + 1
+        });
+      }
     }
 
     if (direction === 'previous') {
