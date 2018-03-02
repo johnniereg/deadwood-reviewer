@@ -25,6 +25,7 @@ const Episodes = [
     },
     {
         vote: "",
+        thoughts: "",
         season: 1,
         episode: 4,
         title: "Here Was a Man",
@@ -32,6 +33,7 @@ const Episodes = [
     },
     {
         vote: "",
+        thoughts: "",        
         season: 1,
         episode: 5,
         title: "The Trial of Jack McCall",
@@ -39,6 +41,7 @@ const Episodes = [
     },
     {
         vote: "",
+        thoughts: "",        
         season: 1,
         episode: 6,
         title: "Plague",
@@ -46,6 +49,7 @@ const Episodes = [
     },
     {
         vote: "",
+        thoughts: "",        
         season: 1,
         episode: 7,
         title: "Bullock Returns to the Camp",
@@ -53,6 +57,7 @@ const Episodes = [
     },
     {
         vote: "",
+        thoughts: "",        
         season: 1,
         episode: 8,
         title: "Suffer the Little Children",
@@ -60,6 +65,7 @@ const Episodes = [
     },
     {
         vote: "",
+        thoughts: "",        
         season: 1,
         episode: 9,
         title: "No Other Sons or Daughters",
@@ -67,6 +73,7 @@ const Episodes = [
     },
     {
         vote: "",
+        thoughts: "",        
         season: 1,
         episode: 10,
         title: "Mister Wu",
@@ -74,6 +81,7 @@ const Episodes = [
     },
     {
         vote: "",
+        thoughts: "",        
         season: 1,
         episode: 11,
         title: "Jewel's Boot Is Made for Walking",
@@ -81,6 +89,7 @@ const Episodes = [
     },
     {
         vote: "",
+        thoughts: "",        
         season: 1,
         episode: 12,
         title: "Sold Under Sin",
@@ -88,6 +97,7 @@ const Episodes = [
     },
     {
         vote: "",
+        thoughts: "",        
         season: 2,
         episode: 1,
         title: "A Lie Agreed Upon (Part I)",
@@ -95,6 +105,7 @@ const Episodes = [
     },
     {
         vote: "",
+        thoughts: "",        
         season: 2,
         episode: 2,
         title: "A Lie Agreed Upon (Part II)",
@@ -102,6 +113,7 @@ const Episodes = [
     },
     {
         vote: "",
+        thoughts: "",        
         season: 2,
         episode: 3,
         title: "New Money",
@@ -109,6 +121,7 @@ const Episodes = [
     },
     {
         vote: "",
+        thoughts: "",        
         season: 2,
         episode: 4,
         title: "Requiem for a Gleet",
@@ -116,6 +129,7 @@ const Episodes = [
     },
     {
         vote: "",
+        thoughts: "",        
         season: 2,
         episode: 5,
         title: "Complications",
@@ -123,6 +137,7 @@ const Episodes = [
     },
     {
         vote: "",
+        thoughts: "",        
         season: 2,
         episode: 6,
         title: "Something Very Expensive",
@@ -130,6 +145,7 @@ const Episodes = [
     },
     {
         vote: "",
+        thoughts: "",        
         season: 2,
         episode: 7,
         title: "E.B. Was Left Out",
@@ -137,12 +153,14 @@ const Episodes = [
     },
     {
         season: 2,
+        thoughts: "",
         episode: 8,
         title: "Childish Things",
         description: "Wolcott offers on a rich claim operated by two ornery brothers, and reports to his boss on their progress overall. Tom Nuttall proudly unveils his new 'Bone-Shaker' bicycle—but some doubt he can ride it. Swearengen and Bullock discuss alternatives to annexing the Hills to Dakota."
     },
     {
         vote: "",
+        thoughts: "",
         season: 2,
         episode: 9,
         title: "Amalgamation and Capital",
@@ -150,6 +168,7 @@ const Episodes = [
     },
     {
         vote: "",
+        thoughts: "",
         season: 2,
         episode: 10,
         title: "Advances, None Miraculous",
@@ -157,6 +176,7 @@ const Episodes = [
     },
     {
         vote: "",
+        thoughts: "",
         season: 2,
         episode: 11,
         title: "The Whores Can Come",
@@ -164,6 +184,7 @@ const Episodes = [
     },
     {
         vote: "",
+        thoughts: "",
         season: 2,
         episode: 12,
         title: "Boy-the-Earth-Talks-To",
@@ -171,6 +192,7 @@ const Episodes = [
     },
     {
         vote: "",
+        thoughts: "",
         season: 3,
         episode: 1,
         title: "Tell Your Good to Ready for Blood",
@@ -178,6 +200,7 @@ const Episodes = [
     },
     {
         vote: "",
+        thoughts: "",
         season: 3,
         episode: 2,
         title: "I Am Not the Fine Man You Take Me For",
@@ -185,6 +208,7 @@ const Episodes = [
     },
     {
         vote: "",
+        thoughts: "",
         season: 3,
         episode: 3,
         title: "True Colors",
@@ -192,6 +216,7 @@ const Episodes = [
     },
     {
         vote: "",
+        thoughts: "",
         season: 3,
         episode: 4,
         title: "Full Faith and Credit",
@@ -199,6 +224,7 @@ const Episodes = [
     },
     {
         vote: "",
+        thoughts: "",
         season: 3,
         episode: 5,
         title: "A Two-Headed Beast",
@@ -206,6 +232,7 @@ const Episodes = [
     },
     {
         vote: "",
+        thoughts: "",
         season: 3,
         episode: 6,
         title: "A Rich Find",
@@ -213,6 +240,7 @@ const Episodes = [
     },
     {
         vote: "",
+        thoughts: "",
         season: 3,
         episode: 7,
         title: "Unauthorized Cinnamon",
@@ -220,6 +248,7 @@ const Episodes = [
     },
     {
         vote: "",
+        thoughts: "",
         season: 3,
         episode: 8,
         title: "Leviathan Smiles",
@@ -227,6 +256,7 @@ const Episodes = [
     },
     {
         vote: "",
+        thoughts: "",
         season: 3,
         episode: 9,
         title: "Amateur Night",
@@ -234,6 +264,7 @@ const Episodes = [
     },
     {
         vote: "",
+        thoughts: "",
         season: 3,
         episode: 10,
         title: "A Constant Throb",
@@ -241,6 +272,7 @@ const Episodes = [
     },
     {
         vote: "",
+        thoughts: "",
         season: 3,
         episode: 11,
         title: "The Catbird Seat",
@@ -248,6 +280,7 @@ const Episodes = [
     },
     {
         vote: "",
+        thoughts: "",
         season: 3,
         episode: 12,
         title: "Tell Him Something Pretty",
