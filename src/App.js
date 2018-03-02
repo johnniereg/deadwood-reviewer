@@ -108,16 +108,20 @@ class App extends Component {
               </div>
             </div>
             <div className="one-half column">
-              <h5>Navigate Episodes</h5>
-              <div onClick={(e) => {this.changeEpisode('next')}}>
-                <a className="button">Next Episode</a>
+              <div className="row">
+                <h5>Navigate Episodes</h5>
+                <div onClick={(e) => {this.changeEpisode('next')}}>
+                  <a className="button">Next</a>
+                </div>
+                <div onClick={(e) => { this.changeEpisode('previous') }}>
+                  <a className="button u-width-full">Previous</a>
+                </div>
               </div>
-              <div onClick={(e) => { this.changeEpisode('previous') }}>
-                <a className="button">Previous Episode</a>
+              <div className="row">
+                <h5>Scoreboard:</h5>
+                <h6>You liked {this.state.likes} episodes.</h6>
+                <h6>You disliked {this.state.dislikes} episodes.</h6>
               </div>
-              <h5>Scoreboard:</h5>
-              <h6>You liked {this.state.likes} episodes.</h6>
-              <h6>You disliked {this.state.dislikes} episodes.</h6>
             </div>
           </div>
         </div>
