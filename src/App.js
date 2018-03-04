@@ -89,7 +89,7 @@ class App extends Component {
     } else {
       voting =  <div>
                   <h5>You { episode.vote } this episode.</h5>
-                  <h6>Here's what Johnnie thought:</h6>
+                  <h6>Johnnie thoughts:</h6>
                   <p>{ episode.thoughts }</p>
                 </div>
     }
@@ -98,7 +98,7 @@ class App extends Component {
       <div className="App body">
         <div className="header container">
           <img src={logo} alt="Deadwood Logo, black and white stylized lettering of the word Deadwood" style={{maxWidth: '100%', marginTop: '-10px'}}></img>
-          <h6 className="subtitle" style={{textAlign: 'center', background: 'white', padding: '5px 0px 5px 0px' }} >Rate episodes and then find out what <a href="https://www.github.com/johnniereg" target="_blank">Johnnie</a> thought of them.</h6>
+          <h6 className="subtitle" style={{textAlign: 'center', background: 'white', padding: '5px 0px 5px 0px' }} >Rate episodes of Deadwood season one and then find out what <a href="https://www.github.com/johnniereg" target="_blank">Johnnie</a> thought of the show.</h6>
         </div>
         <div className="content container">
           <div className="row">
