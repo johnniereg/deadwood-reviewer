@@ -4,7 +4,8 @@ import './skeleton.css';
 import './App.css';
 import Episodes from './episode-details.js';
 import Episode from './components/Episode.js';
-import VoteButton from './components/VoteButton.js';
+import Button from './components/Button.js';
+import logo from './img/logo.jpeg';
 
 class App extends Component {
 
@@ -79,10 +80,10 @@ class App extends Component {
     if (episode.vote === '') {
       voting =  <div>  
                   <div className="one-half column" onClick={(e) => { this.handleVote('like') }}>
-                    <VoteButton buttonType={'like'} buttonName={`I Liked It`} />
+                    <Button buttonName={"I Liked It"} width={"100%"} />
                   </div>
                   <div className="one-half column" onClick={(e) => { this.handleVote('dislike') }}>
-                    <VoteButton buttonType={'dislike'} buttonName={`I Didn't Like It`} />
+                    <Button buttonName={"I Didn't Like It"} width={"100%"}/>
                   </div>
                 </div>
     } else {
@@ -96,31 +97,37 @@ class App extends Component {
     return (
       <div className="App">
         <div className="header container">
-          <h1>Deadwood Reviewer</h1>
-          <h6>Rate episodes and see if you felt the same way as Johnnie did.</h6>
+          <img src={logo} alt="Deadwood Logo, black and white stylized lettering of the word Deadwood" style={{maxWidth: '100%', marginTop: '-10px'}}></img>
+          <h6 className="subtitle" style={{textAlign: 'center'}} >Rate episodes and then find out what Johnnie thought of them.</h6>
         </div>
         <div className="container">
           <div className="row">
-            <div className="one-half column">
+            <div className="two-thirds column">
               <Episode index={this.state.index} />
               <div className="row">
                 { voting }
               </div>
             </div>
-            <div className="one-half column">
+            <div className="one-third column">
               <div className="row">
                 <h5>Navigate Episodes</h5>
                 <div onClick={(e) => {this.changeEpisode('next')}}>
-                  <a className="button">Next</a>
+                  <Button buttonName={"Next"} width={"100%"}/>
                 </div>
                 <div onClick={(e) => { this.changeEpisode('previous') }}>
-                  <a className="button u-width-full">Previous</a>
+                  <Button buttonName={"Previous"} width={"100%"} />
                 </div>
               </div>
               <div className="row">
                 <h5>Scoreboard:</h5>
-                <h6>You liked {this.state.likes} episodes.</h6>
-                <h6>You disliked {this.state.dislikes} episodes.</h6>
+                <div className="row">
+                  <div className="one-half column">
+                    <h6>You liked: {this.state.likes}</h6>
+                  </div>
+                  <div className="one-half column">
+                    <h6>You disliked: {this.state.dislikes}</h6>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
