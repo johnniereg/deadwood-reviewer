@@ -4,6 +4,10 @@
   margin-top: 5%;
 }
 
+.content {
+  margin-bottom: 2%;
+}
+
 body {
   color: black !important;
   background-size: 6px 6px !important;

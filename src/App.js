@@ -100,7 +100,7 @@ class App extends Component {
           <img src={logo} alt="Deadwood Logo, black and white stylized lettering of the word Deadwood" style={{maxWidth: '100%', marginTop: '-10px'}}></img>
           <h6 className="subtitle" style={{textAlign: 'center', background: 'white', padding: '5px 0px 5px 0px' }} >Rate episodes and then find out what <a href="https://www.github.com/johnniereg" target="_blank">Johnnie</a> thought of them.</h6>
         </div>
-        <div className="container">
+        <div className="content container">
           <div className="row">
             <div className="two-thirds column" style={{ background: 'white', padding: '5px 10px 5px 10px'}} >
               <Episode index={this.state.index} />
