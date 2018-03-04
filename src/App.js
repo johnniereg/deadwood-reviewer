@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './normalize.css';
+// import './normalize.css';
 import './skeleton.css';
 import './App.css';
 import Episodes from './episode-details.js';
@@ -95,29 +95,20 @@ class App extends Component {
     }
 
     return (
-      <div className="App">
+      <div className="App body">
         <div className="header container">
           <img src={logo} alt="Deadwood Logo, black and white stylized lettering of the word Deadwood" style={{maxWidth: '100%', marginTop: '-10px'}}></img>
-          <h6 className="subtitle" style={{textAlign: 'center'}} >Rate episodes and then find out what Johnnie thought of them.</h6>
+          <h6 className="subtitle" style={{textAlign: 'center', background: 'white', padding: '5px 0px 5px 0px' }} >Rate episodes and then find out what <a href="https://www.github.com/johnniereg" target="_blank">Johnnie</a> thought of them.</h6>
         </div>
         <div className="container">
           <div className="row">
-            <div className="two-thirds column">
+            <div className="two-thirds column" style={{ background: 'white', padding: '5px 10px 5px 10px'}} >
               <Episode index={this.state.index} />
               <div className="row">
                 { voting }
               </div>
             </div>
-            <div className="one-third column">
-              <div className="row">
-                <h5>Navigate Episodes</h5>
-                <div onClick={(e) => {this.changeEpisode('next')}}>
-                  <Button buttonName={"Next"} width={"100%"}/>
-                </div>
-                <div onClick={(e) => { this.changeEpisode('previous') }}>
-                  <Button buttonName={"Previous"} width={"100%"} />
-                </div>
-              </div>
+            <div className="one-third column" style={{ background: 'white', padding: '5px 10px 5px 10px'}} >
               <div className="row">
                 <h5>Scoreboard:</h5>
                 <div className="row">
@@ -127,6 +118,14 @@ class App extends Component {
                   <div className="one-half column">
                     <h6>You disliked: {this.state.dislikes}</h6>
                   </div>
+                </div>
+              </div>
+              <div className="row">
+                <div onClick={(e) => {this.changeEpisode('next')}}>
+                  <Button buttonName={"Next Episode"} width={"100%"}/>
+                </div>
+                <div onClick={(e) => { this.changeEpisode('previous')}}>
+                  <Button buttonName={"Previous Episode"} width={"100%"} />
                 </div>
               </div>
             </div>
