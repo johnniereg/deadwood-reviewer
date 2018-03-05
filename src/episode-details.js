@@ -49,7 +49,7 @@ const Episodes = [
     },
     {
         vote: "",
-        thoughts: "The thing about Deadwood that got to me back when I first watched it, which in a lot of ways I feel I’ve outgrown, is a sort of shock from looking at the kinds of communities our society has arisen. Ian McShane’s acting is great, don’t get me wrong, but the Al Swearengen of season one was not someone I was exactly rooting for…",        
+        thoughts: "The thing about Deadwood that got to me back when I first watched it, which in a lot of ways I feel I’ve outgrown, is a sort of shock from looking at the kinds of communities our society has arisen from. Ian McShane’s acting is great, don’t get me wrong, but the Al Swearengen of season one was not someone I was exactly rooting for…",        
         season: 1,
         episode: 7,
         title: "Bullock Returns to the Camp",
@@ -65,7 +65,7 @@ const Episodes = [
     },
     {
         vote: "",
-        thoughts: "Deadwood’s theme reminds me a lot of web development actually. CTRL+N in your text editor. Nothing there to start. No explicit rules. Just the knowledge you brought with you and that you might attain, but the building has to begins and elements and scripts will together. Sometimes in a way that’s elegant and sometimes it just has to work…",        
+        thoughts: "Deadwood’s theme reminds me a lot of web development actually. CTRL+N in your text editor. Nothing there to start. No explicit rules. Just the knowledge you brought with you and that you might attain, but the building has to begin and elements and scripts are pulled together. Sometimes in a way that’s elegant and sometimes in a way that just works…",        
         season: 1,
         episode: 9,
         title: "No Other Sons or Daughters",
