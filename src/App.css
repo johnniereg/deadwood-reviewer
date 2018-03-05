@@ -6,6 +6,28 @@
 
 .content {
   margin-bottom: 3%;
+
+}
+
+.logo {
+  max-width: 100%;
+  margin-top: -10px;
+}
+
+.main {
+  background: white;
+  padding: 5px 10px 5px 10px;
+}
+
+.sidebar {
+  background: white;
+  padding: 5px 10px 5px 10px;
+}
+
+.subtitle {
+  text-align: center !important;
+  background: white;
+  padding: 5px 0px 5px 0px;
 }
 
 body {
